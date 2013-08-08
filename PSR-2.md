@@ -1,4 +1,3 @@
-
 Coding Style Guide
 ==================
 
@@ -28,29 +27,28 @@ interpreted as described in [RFC 2119][].
 
 - 程式碼必須遵循 [PSR-1][].
 
-- 程式碼必須使用4個空格縮排，而非tab。
+- 程式碼必須使用4個`空格`縮排，而非`tab`。
 
 - 行的長度必須不存在硬限制，軟限制必須是120個字元;行應該是80個字元或更少。
 
-- namespace宣告後必須有一個空行，use宣告區塊後，必須有一個空行。
+- `namespace`宣告後必須有一個空行，`use`宣告區塊後，必須有一個空行。
 
-- class的開始括號必須在下一行，結束括號必須在內容後的下一行。
+- `class`的開始括號必須在下一行，結束括號必須在內容後的下一行。
 
-- Opening braces for methods MUST go on the next line, and closing braces MUST
-  go on the next line after the body.
+- `methods`的開始括號必須在下一行，結束括號必須在內容後的下一行。
 
 - 可視性，即指 `public`, `protected`, 或 `private`，必須宣告於所有的 `properties` 和 `methods`;
   `abstract` 和 `final` 必須宣告在可視性之前; `static` 必須宣告在可視性之後。
   
-- 控制結構的關鍵字後面必須有一個空格，方法(method)及函數(function)呼叫則不必。
+- 控制結構的關鍵字後面必須有一個空格，`method`及`function`呼叫則不必。
 
 - 控制結構的開始括號必須在同一行上，結束括號必須在內容後的下一行。
 
 - 控制結構的開始括號後面，不必有一個空格，控制結構的結束括號之前，不必有一個空格
 
-### 1.1. Example
+### 1.1. 範例
 
-This example encompasses some of the rules below as a quick overview:
+這個例子包含下面的規則，可以作為一個快速概述。:
 
 ```php
 <?php
@@ -80,41 +78,38 @@ class Foo extends Bar implements FooInterface
 }
 ```
 
-2. General
+2. 一般原则
 ----------
 
-### 2.1 Basic Coding Standard
+### 2.1 基本編程標準
 
-Code MUST follow all rules outlined in [PSR-1][].
+編程遵守 [PSR-1][].
 
-### 2.2 Files
+### 2.2 檔案規則
 
-All PHP files MUST use the Unix LF (linefeed) line ending.
+所有PHP檔案，必須使用Unix LF換行符號。
 
-All PHP files MUST end with a single blank line.
+所有PHP檔案，必須使用一個空白行作為結尾。
 
-The closing `?>` tag MUST be omitted from files containing only PHP.
+當檔案中只包含PHP程式，`?>` tag 必須省略。
 
 ### 2.3. Lines
 
-There MUST NOT be a hard limit on line length.
+並不需要嚴格限制每行長度。
 
-The soft limit on line length MUST be 120 characters; automated style checkers
-MUST warn but MUST NOT error at the soft limit.
+軟性限制的每行長度為120個字元，自動化風格檢測程式必須提出警告，但不視為軟性限制錯誤。
 
-Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD
-be split into multiple subsequent lines of no more than 80 characters each.
+每行不應超過80字元;行長於應分為​​多個後續行不超過80個字元。
 
-There MUST NOT be trailing whitespace at the end of non-blank lines.
+每行末端不可附有多餘空格。
 
-Blank lines MAY be added to improve readability and to indicate related
-blocks of code.
+空行可能被添加，以提高可讀性，以利區分相關的程式碼區塊。
 
-There MUST NOT be more than one statement per line.
+每行不可超過一個敘述。
 
-### 2.4. Indenting
+### 2.4. 縮排
 
-Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
+使用4個空格代替Tab
 
 > N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
 > problems with diffs, patches, history, and annotations. The use of spaces
@@ -123,27 +118,26 @@ Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
 
 ### 2.5. Keywords and True/False/Null
 
-PHP [keywords][] MUST be in lower case.
+PHP [keywords][] 必須小寫。
 
-The PHP constants `true`, `false`, and `null` MUST be in lower case.
+PHP 內建常數 `true`, `false`, and `null` 必須小寫。.
 
 [keywords]: http://php.net/manual/en/reserved.keywords.php
 
 
 
-3. Namespace and Use Declarations
+3. Namespace 及 Use 宣告
 ---------------------------------
 
-When present, there MUST be one blank line after the `namespace` declaration.
+在 `namespace` 宣告之後必須有一個空行。
 
-When present, all `use` declarations MUST go after the `namespace`
-declaration.
+所有 `use` 宣告必須在 `namespace` 宣告之後。
 
-There MUST be one `use` keyword per declaration.
+一個 `use` 關鍵字，對應一個宣告。
 
-There MUST be one blank line after the `use` block.
+`use` 宣告區塊之後，必須有一個空白行
 
-For example:
+例如:
 
 ```php
 <?php
@@ -592,28 +586,26 @@ $foo->bar(
 ```
 
 
-7. Conclusion
+7. 結論
 --------------
 
-There are many elements of style and practice intentionally omitted by this
-guide. These include but are not limited to:
+有許多因素故意省略本指南的風格和實踐。這些包括但不限於：
 
-- Declaration of global variables and global constants
+- 全域變數和全域常數宣告
 
-- Declaration of functions
+- 函數宣告
 
-- Operators and assignment
+- 運算子和指派運算子
 
-- Inter-line alignment
+- 跨線對齊
 
-- Comments and documentation blocks
+- 註解和文檔區塊
 
-- Class name prefixes and suffixes
+- 類別名稱的前綴和後綴
 
-- Best practices
+- 最佳實例
 
-Future recommendations MAY revise and extend this guide to address those or
-other elements of style and practice.
+未來建議可修改和延長本指南，以解決這些或其他元素的風格和實踐。
 
 
 Appendix A. Survey
