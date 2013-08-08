@@ -479,27 +479,20 @@ try {
 }
 ```
 
-6. Closures
+6. 匿名函数
 -----------
 
-Closures MUST be declared with a space after the `function` keyword, and a
-space before and after the `use` keyword.
+宣告匿名函数必須於 `function` 後留一個空格，在 `use` 的前後各留一個空格。
 
-The opening brace MUST go on the same line, and the closing brace MUST go on
-the next line following the body.
+開始括號必須在同一行，而結束括號必須在接在內容的下一行。
 
-There MUST NOT be a space after the opening parenthesis of the argument list
-or variable list, and there MUST NOT be a space before the closing parenthesis
-of the argument list or variable list.
+開始括號之後，不必留一個空格，參數、變數列表的結束括號之前，不必留一個空格。
 
-In the argument list and variable list, there MUST NOT be a space before each
-comma, and there MUST be one space after each comma.
+參數、變數列表，每個逗號前不必留一個空格，但逗號之後，必須留一個空格。
 
-Closure arguments with default values MUST go at the end of the argument
-list.
+有預設值的匿名函数參數，必須放在參數列表的最後。
 
-A closure declaration looks like the following. Note the placement of
-parentheses, commas, spaces, and braces:
+匿名函数宣告如下所示。注意括弧，逗號，空格和括號的位置：
 
 ```php
 <?php
@@ -512,17 +505,11 @@ $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
 };
 ```
 
-Argument lists and variable lists MAY be split across multiple lines, where
-each subsequent line is indented once. When doing so, the first item in the
-list MUST be on the next line, and there MUST be only one argument or variable
-per line.
+參數和變量列表可以拆為多行，在隨後的每一行縮排一次。這樣做時，列表中的第一項必須是下一行，每行必須只有一個參數或變數。
 
-When the ending list (whether or arguments or variables) is split across
-multiple lines, the closing parenthesis and opening brace MUST be placed
-together on their own line with one space between them.
+當拆為多行的（不論參數或變數）列表結束時，右括號，左大括號必須放在同一行，中間留一個空格 ` ) { ` 。
 
-The following are examples of closures with and without argument lists and
-variable lists split across multiple lines.
+以下是匿名函数帶或不帶參數、變數列表，並拆為多行的例子。
 
 ```php
 <?php
@@ -571,8 +558,7 @@ $shortArgs_longVars = function ($arg) use (
 };
 ```
 
-Note that the formatting rules also apply when the closure is used directly
-in a function or method call as an argument.
+注意：格式化規則也可適用於匿名函数，當匿名函数直接使用一個 function 或 method call 作為參數時。
 
 ```php
 <?php
